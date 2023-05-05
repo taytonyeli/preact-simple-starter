@@ -1,14 +1,13 @@
 import { h } from 'preact';
-import style from './style.css';
 
 const Home = () => {
 	return (
-		<div class={style.home}>
+		<div className="main p-5 mt-20">
 			<a href="https://preactjs.com">
 				<img src="../../assets/preact-logo.svg" alt="Preact Logo" height="160" width="160" />
 			</a>
 			<h1>Get Started Building PWAs with Preact-CLI</h1>
-			<section>
+			<section className='text-black'>
 				<Resource
 					title="Learn Preact"
 					description="If you're new to Preact, try the interactive tutorial to learn important concepts"
@@ -31,7 +30,7 @@ const Home = () => {
 
 const Resource = props => {
 	return (
-		<a href={props.link} class={style.resource}>
+		<a href={props.link}>
 			<h2>{props.title}</h2>
 			<p>{props.description}</p>
 		</a>
